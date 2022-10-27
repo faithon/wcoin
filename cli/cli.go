@@ -3,7 +3,7 @@ package cli
 import (
 	"flag"
 	"fmt"
-	"os"
+	"runtime"
 
 	"github.com/faithon/wcoin/explorer"
 	"github.com/faithon/wcoin/rest"
@@ -14,7 +14,7 @@ func usage() {
 	fmt.Println("Please use the following flags:\n")
 	fmt.Println("-port 4000: 	Sets port")
 	fmt.Println("-mode rest: 	Sets mode")
-	os.Exit(0)
+	runtime.Goexit()
 }
 
 func Start() {
